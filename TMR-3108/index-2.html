@@ -1,0 +1,676 @@
+<style>
+    .visual-content .icon-remove {
+    color: #fff;
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    font-size: 2.4rem;
+    display: none;
+    text-shadow: 0 1px 3px rgba(0,0,0,.75)
+}
+
+.visual-content video {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 0;
+    width: 0;
+    background-color: rgba(0,0,0,.85);
+    -webkit-transition-property: width height bottom;
+    transition-property: width height bottom
+}
+
+.visual-content .content li {
+    cursor: pointer;
+    height: 200px;
+    background-size: cover;
+    -webkit-transition-property: all;
+    transition-property: all
+}
+
+.visual-content .content li:nth-child(n+4) {
+    max-height: 0;
+    opacity: 0
+}
+
+.visual-content .content li .video-container {
+    width: calc(100% + 15px * 2);
+    height: 100%;
+    overflow: hidden;
+    margin-left: -15px
+}
+
+.visual-content .content li.active video {
+    width: 100vw;
+    height: 50vh;
+    bottom: 50vh
+}
+
+.visual-content .content.active li.active {
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    z-index: 1055
+}
+
+.visual-content .content.active li.active .icon-remove {
+    display: block
+}
+
+.visual-content .content.active li.active .frame {
+    background-color: rgba(0,0,0,.85);
+    height: 50vh;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    top: 50%
+}
+
+.visual-content .content.active li.active .frame h2 {
+    font-size: 24px;
+    line-height: 30px;
+    color: #fff;
+    height: 60px
+}
+
+.visual-content .content.active li.active .frame p {
+    display: block;
+    opacity: 1;
+    filter: alpha(opacity=100);
+    text-align: left
+}
+
+.visual-content .content li,.visual-content .frame,.visual-content .frame p,.visual-content .frame span,.visual-content video {
+    -webkit-transition-duration: .35s;
+    transition-duration: .35s;
+    -webkit-transition-timing-function: cubic-bezier(.785,.135,.15,.86);
+    transition-timing-function: cubic-bezier(.785,.135,.15,.86)
+}
+
+.visual-content .frame {
+    height: 68px;
+    padding: 10px 0;
+    background-color: #fff;
+    position: absolute;
+    bottom: 0;
+    display: table;
+    width: calc(100% - 99px);
+    -webkit-transition-property: all;
+    transition-property: all
+}
+
+.visual-content .frame .description,.visual-content .frame .position {
+    padding: 0 15px
+}
+
+.visual-content .frame .description p,.visual-content .frame .position p {
+    font-family: "T1 Body Font Light","T1 Body Font",Arial,Helvetica,sans-serif
+}
+
+.module-360 .btn-toggle-spin.active,.visual-content .frame h2,.visual-content .frame span {
+    font-family: "T1 Body Font Bold",Arial,Helvetica,sans-serif
+}
+
+.visual-content .frame .position {
+    padding-right: 1px
+}
+
+.visual-content .frame span {
+    font-size: 32px;
+    line-height: 30px;
+    color: #989a9d;
+    -webkit-transition-property: color font-size;
+    transition-property: color font-size
+}
+
+.visual-content .frame h2 {
+    display: table-cell;
+    vertical-align: middle;
+    overflow: hidden;
+    font-size: 18px;
+    line-height: 24px;
+    height: 48px;
+    color: #202020;
+    -webkit-transition-property: opacity;
+    transition-property: opacity;
+    text-align: left
+}
+
+.visual-content.more .btn-more,.visual-content.pro .content li.active.is-video::after,.visual-content:not(.more) .btn-less {
+    display: none
+}
+
+.visual-content .frame p {
+    display: none;
+    color: #fff;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    font-size: 17px;
+    line-height: 30px
+}
+
+.visual-content footer {
+    padding-top: 30px
+}
+
+.visual-content.more .content li:nth-child(n+4) {
+    max-height: 410px;
+    opacity: 1
+}
+
+.visual-content.more .content li:nth-child(n+4).active {
+    max-height: none
+}
+
+.visual-content.pro .content {
+    position: relative
+}
+
+.visual-content.pro .content li.active {
+    overflow: hidden;
+    position: fixed
+}
+
+.visual-content.pro .content li.active::after {
+    content: "";
+    background: url(/images/pro/image-overlay.svg) bottom/100% no-repeat;
+    position: absolute;
+    width: 40%;
+    padding-bottom: 40%;
+    right: 0;
+    pointer-events: none;
+    max-height: 323px;
+    max-width: 323px;
+    bottom: 50%;
+    z-index: -1;
+    animation-name: fadeIn;
+    animation-duration: .35s;
+    animation-timing-function: cubic-bezier(.785,.135,.15,.86)
+}
+
+@media screen and (max-width: 767px) and (orientation:portrait) {
+    .visual-content .content.active li.active {
+        background-size:auto 51%;
+        background-repeat: no-repeat
+    }
+
+    .visual-content .content.active li.active .frame {
+        background-color: #000
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .visual-content .content li {
+        height:410px
+    }
+
+    .visual-content .frame {
+        display: -webkit-flex;
+        display: flex;
+        height: 100px;
+        padding: 20px 8px;
+        left: 24px;
+        bottom: 0;
+        width: calc(100% - 270px)
+    }
+
+    .visual-content .frame h2 {
+        display: block;
+        font-size: 22px;
+        line-height: 28px;
+        height: 64px
+    }
+}
+
+@media screen and (min-width: 992px) {
+
+    .visual-content .section-title {
+        padding:0
+    }
+
+    .visual-content .section-title p {
+        text-align: center
+    }
+
+    .visual-content .container-fluid {
+        position: relative
+    }
+
+    .visual-content .t1-arrow-control {
+        position: absolute;
+        top: 50%;
+        -moz-transform: translateY(-50%);
+        -o-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        z-index: 1
+    }
+
+    .visual-content .t1-arrow-control.prev {
+        left: 67px
+    }
+
+    .visual-content .t1-arrow-control.next {
+        right: 67px
+    }
+
+    .visual-content .iscroller {
+        overflow: hidden;
+        white-space: nowrap;
+        margin-left: -15px;
+        margin-right: -15px
+    }
+
+    .visual-content .iscroller .content {
+        height: 410px;
+        white-space: normal;
+        width: 200vw;
+        margin: 0
+    }
+
+    .visual-content .iscroller .content li {
+        width: calc(100vw / 3);
+        display: inline-block
+    }
+
+    .visual-content .iscroller .content.active li::before {
+        display: none;
+    }
+
+    .visual-content .iscroller .content.active li:not(.active) {
+        width: 10vw
+    }
+
+    .visual-content .iscroller .content.active li.active.col-md-4 {
+        width: 80vw
+    }
+
+    .visual-content .iscroller .content.active li.active.col-md-6 {
+        width: 90vw
+    }
+
+    .visual-content .iscroller .content.active li.active.col-md-12 {
+        width: 100vw
+    }
+
+    .visual-content.ie .iscroller .content li {
+        width: 33vw
+    }
+
+    .visual-content .content {
+        overflow: hidden
+    }
+
+    .visual-content .content li {
+        height: 410px!important;
+        opacity: 1!important;
+        max-height: none!important
+    }
+
+    .visual-content .content.active li.active {
+        position: relative;
+        z-index: 0;
+        overflow: hidden
+    }
+
+    .visual-content .content.active li.active.col-md-4 {
+        width: 80%
+    }
+
+    .visual-content .content.active li.active.col-md-6 {
+        width: 90%
+    }
+
+    .visual-content .content.active li.active.col-md-12 {
+        width: 100%
+    }
+
+    .visual-content .content.active li.active .frame {
+        width: 460px;
+        height: 332px;
+        left: 150px;
+        top: auto
+    }
+
+    .visual-content .content.active li.active video {
+        position: relative;
+        bottom: 0;
+        left: -15px;
+        width: calc(100% + 30px);
+        height: 100%
+    }
+
+    .visual-content .content .frame {
+        bottom: -27px;
+        left: 30px;
+        padding: 16px 0;
+        width: calc(100% - 60px)
+    }
+
+    .visual-content .content.active li:not(.active) {
+        width: 10%
+    }
+
+    .visual-content .content.active li:not(.active) .frame {
+        height: 103px;
+        background-color: transparent;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+        display: block
+    }
+
+    .visual-content .content.active li:not(.active) .frame span {
+        font-size: 67px;
+        line-height: 30px;
+        color: #fff;
+        text-align: center;
+        float: none
+    }
+
+    .visual-content .content.active li:not(.active) .frame h2 {
+        opacity: 0;
+        filter: alpha(opacity=0)
+    }
+
+    .visual-content.pro .content li.active::after {
+        bottom: 0
+    }
+}
+
+.data-comparison .panel-collapse,.module-360.spin-view-active .overflowable-row,.module-360.visible-box:not(.in-box) .overflowable-row {
+    opacity: 0
+}
+
+.visual-content-carousel .content li.active .position .icon {
+    color: #fff
+}
+
+.visual-content-carousel .frame .position .icon {
+    color: #e50000;
+    font-size: 30px
+}
+
+@media screen and (min-width: 992px) {
+    .visual-content .content.active li:not(.active) .frame .icon {
+        font-size:50px;
+        color: #fff
+    }
+}
+
+.t1-carousel-container .t1-arrow-control {
+    position: absolute;
+    top: 50%;
+    -moz-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%)
+}
+
+.t1-carousel-container .slick-initialized .t1-slide,.t1-carousel-container .t1-slide.initialSlide {
+    display: block
+}
+
+.t1-carousel-container .slick-arrow {
+    position: absolute;
+    top: 50%;
+    -moz-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%)
+}
+
+.t1-carousel-container.left-align-slick .slick-track {
+    margin-left: 0;
+    margin-right: 0
+}
+</style>
+
+<section id="visual-content-carousel0" class="visual-content visual-content-carousel lazy-loader scroll-track" data-lazyload-bkpt-dependent="true" data-bt-eventclass="componentevent" data-bt-category="component" data-bt-componentname="visual-content" data-bt-scroll="">
+
+    <!-- grade-explore/intro-section-with-cta.nj : begin -->
+    <div class="container">
+        <header class="section-title">
+            <div class="row">
+                <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-lg-8 col-lg-offset-2">
+                    <h2>Ключевые преимущества <nobr>Toyota Corolla</nobr></h2>
+
+
+
+                </div>
+            </div>
+        </header>
+    </div>
+    <!-- grade-explore/intro-section-with-cta.nj : end -->
+
+
+
+    <div class="container-fluid">
+        <a class="t1-arrow-control prev preventDefault hidden-xs hidden-sm hidden" href="#"></a>
+        <div class="iscroller">
+            <!-- car-explore/visual-content-items.nj : begin -->
+            <ul class="row content active" style="transition-timing-function: cubic-bezier(0.1, 0.57, 0.1, 1); transition-duration: 0ms; transform: translate(0px, 0px) translateZ(0px); width: 167vw;">
+
+                <li class="col-xs-12 col-md-4 lazy-bkpt-item src-loaded" data-lazyload-xs="//d1k2b30k3u7bnq.cloudfront.net/resize/tridion/768x432/ruru/corolla-ksp-1_tcm-3020-1823301.jpg" data-lazyload-sm="//d1k2b30k3u7bnq.cloudfront.net/resize/tridion/992x558/ruru/corolla-ksp-1_tcm-3020-1823301.jpg" data-lazyload-md="//d1k2b30k3u7bnq.cloudfront.net/resize/tridion/960x540/ruru/corolla-ksp-1_tcm-3020-1823301.jpg" data-lazyload-lg="//s3-eu-west-1.amazonaws.com/tme-toyotaone-prev/toyotaone/ruru/corolla-ksp-1_tcm-3020-1823301.jpg" style="background-image: url(&quot;//s3-eu-west-1.amazonaws.com/tme-toyotaone-prev/toyotaone/ruru/corolla-ksp-1_tcm-3020-1823301.jpg&quot;);" data-bt-value="Превосходная управляемость">
+
+                    <span class="icon icon-remove hidden-md hidden-lg"></span>
+                    <div class="frame">
+                        <span class="hidden-xs position">
+
+
+                            01
+
+                        </span>
+                        <div class="description">
+                            <h2>Превосходная управляемость</h2>
+                            <p>Благодаря новой глобальной модульной архитектуре TNGA, Toyota Corolla получила увеличенную жесткость кузова, сниженный центр тяжести, что обеспечивает повышенную маневренность и&nbsp;наилучшую обзорность.</p>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="col-xs-12 col-md-4 lazy-bkpt-item src-loaded active" data-lazyload-xs="//d1k2b30k3u7bnq.cloudfront.net/resize/tridion/768x432/ruru/corolla-ksp-2_tcm-3020-1823302.jpg" data-lazyload-sm="//d1k2b30k3u7bnq.cloudfront.net/resize/tridion/992x558/ruru/corolla-ksp-2_tcm-3020-1823302.jpg" data-lazyload-md="//d1k2b30k3u7bnq.cloudfront.net/resize/tridion/960x540/ruru/corolla-ksp-2_tcm-3020-1823302.jpg" data-lazyload-lg="//s3-eu-west-1.amazonaws.com/tme-toyotaone-prev/toyotaone/ruru/corolla-ksp-2_tcm-3020-1823302.jpg" style="background-image: url(&quot;//s3-eu-west-1.amazonaws.com/tme-toyotaone-prev/toyotaone/ruru/corolla-ksp-2_tcm-3020-1823302.jpg&quot;);" data-bt-value="Премиальный экстерьер">
+
+                    <span class="icon icon-remove hidden-md hidden-lg"></span>
+                    <div class="frame">
+                        <span class="hidden-xs position">
+
+
+                            02
+
+                        </span>
+                        <div class="description">
+                            <h2>Премиальный экстерьер</h2>
+                            <p>Массивные передние и&nbsp;задние крылья, плавная линия крыши, внушительная решетка радиатора, снабженная горизонтальными полосами, низкий и&nbsp;атлетичный силуэт&nbsp;— экстерьер Toyota Corolla подчеркивает статусный облик седана.</p>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="col-xs-12 col-md-4 lazy-bkpt-item src-loaded " data-lazyload-xs="//d1k2b30k3u7bnq.cloudfront.net/resize/tridion/768x432/ruru/corolla-ksp-int_tcm-3020-1823303.jpg" data-lazyload-sm="//d1k2b30k3u7bnq.cloudfront.net/resize/tridion/992x558/ruru/corolla-ksp-int_tcm-3020-1823303.jpg" data-lazyload-md="//d1k2b30k3u7bnq.cloudfront.net/resize/tridion/960x540/ruru/corolla-ksp-int_tcm-3020-1823303.jpg" data-lazyload-lg="//s3-eu-west-1.amazonaws.com/tme-toyotaone-prev/toyotaone/ruru/corolla-ksp-int_tcm-3020-1823303.jpg" style="background-image: url(&quot;//s3-eu-west-1.amazonaws.com/tme-toyotaone-prev/toyotaone/ruru/corolla-ksp-int_tcm-3020-1823303.jpg&quot;);" data-bt-value="Уникальное оснащение">
+
+                    <span class="icon icon-remove hidden-md hidden-lg"></span>
+                    <div class="frame">
+                        <span class="hidden-xs position">
+
+
+                            03
+
+                        </span>
+                        <div class="description">
+                            <h2>Уникальное оснащение</h2>
+                            <p>Среди основных элементов современного технологического оснащения Toyota Corolla можно выделить новую мультимедийную систему с&nbsp;дисплеем 8&nbsp;дюймов, 10-дюймовый цветной проекционный дисплей на&nbsp;лобовое стекло и&nbsp;беспроводную зарядку для смартфона.</p>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="col-xs-12 col-md-4 lazy-bkpt-item src-loaded" data-lazyload-xs="//d1k2b30k3u7bnq.cloudfront.net/resize/tridion/768x432/ruru/corolla-ksp-4_tcm-3020-1838071.jpg" data-lazyload-sm="//d1k2b30k3u7bnq.cloudfront.net/resize/tridion/992x558/ruru/corolla-ksp-4_tcm-3020-1838071.jpg" data-lazyload-md="//d1k2b30k3u7bnq.cloudfront.net/resize/tridion/960x540/ruru/corolla-ksp-4_tcm-3020-1838071.jpg" data-lazyload-lg="//s3-eu-west-1.amazonaws.com/tme-toyotaone-prev/toyotaone/ruru/corolla-ksp-4_tcm-3020-1838071.jpg" style="background-image: url(&quot;//s3-eu-west-1.amazonaws.com/tme-toyotaone-prev/toyotaone/ruru/corolla-ksp-4_tcm-3020-1838071.jpg&quot;);" data-bt-value="Максимальный комфорт">
+
+                    <span class="icon icon-remove hidden-md hidden-lg"></span>
+                    <div class="frame">
+                        <span class="hidden-xs position">
+
+
+                            04
+
+                        </span>
+                        <div class="description">
+                            <h2>Максимальный комфорт</h2>
+                            <p>2-зонный климат-контроль с&nbsp;функцией интеллектуального управления S-Flow и&nbsp;низкий уровень шума делают Toyota Corolla превосходным городским седаном, который обеспечивает максимальный комфорт при каждой поездке.</p>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="col-xs-12 col-md-4 lazy-bkpt-item src-loaded" data-lazyload-xs="//d1k2b30k3u7bnq.cloudfront.net/resize/tridion/768x432/ruru/corolla-ksp-5_tcm-3020-1838072.jpg" data-lazyload-sm="//d1k2b30k3u7bnq.cloudfront.net/resize/tridion/992x558/ruru/corolla-ksp-5_tcm-3020-1838072.jpg" data-lazyload-md="//d1k2b30k3u7bnq.cloudfront.net/resize/tridion/960x540/ruru/corolla-ksp-5_tcm-3020-1838072.jpg" data-lazyload-lg="//s3-eu-west-1.amazonaws.com/tme-toyotaone-prev/toyotaone/ruru/corolla-ksp-5_tcm-3020-1838072.jpg" style="background-image: url(&quot;//s3-eu-west-1.amazonaws.com/tme-toyotaone-prev/toyotaone/ruru/corolla-ksp-5_tcm-3020-1838072.jpg&quot;);" data-bt-value="Современный интерьер">
+
+                    <span class="icon icon-remove hidden-md hidden-lg"></span>
+                    <div class="frame">
+                        <span class="hidden-xs position">
+
+
+                            05
+
+                        </span>
+                        <div class="description">
+                            <h2>Современный интерьер</h2>
+                            <p>Интерьер Toyota Corolla&nbsp;— современный, без лишних деталей, с&nbsp;премиальным качеством исполнения. Улучшенная эргономика, новое рулевое колесо, высококачественные материалы отделки и&nbsp;кожаная комбинированная обивка сидений подчеркивают «бизнес» статус седана.</p>
+                        </div>
+                    </div>
+                </li>
+
+            </ul>
+            <!-- car-explore/visual-content-items.nj : end -->
+        </div>
+        <a class="t1-arrow-control next preventDefault hidden-xs hidden-sm" href="#"></a>
+    </div>
+    <footer class="container-fluid hidden-md hidden-lg">
+        <div class="row">
+            <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-12">
+                <button class="btn btn-simple btn-more btn-toggle-more" role="button">Показать больше</button>
+                <button class="btn btn-simple btn-less btn-toggle-more" role="button">Скрыть</button>
+            </div>
+        </div>
+    </footer>
+
+</section>
+
+
+<section id="visual-content-carousel1" class="section spacing-bottom-0 visual-content visual-content-carousel lazy-loader scroll-track" data-lazyload-bkpt-dependent="true" data-bt-eventclass="componentevent" data-bt-category="component" data-bt-componentname="visual-content" data-bt-scroll="">
+        
+            <!-- grade-explore/intro-section-with-cta.nj : begin -->
+    <div class="container">
+        <header class="section-title">
+            <div class="row">
+                <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-lg-8 col-lg-offset-2">
+                    <h2>Технологии комфорта <nobr>Toyota Corolla</nobr></h2>
+                    
+                    
+                        
+</div>
+            </div>
+        </header>
+    </div>
+    <!-- grade-explore/intro-section-with-cta.nj : end -->
+
+        
+        
+            <div class="container-fluid">
+                <!-- car-explore/visual-content-items.nj : begin -->
+<ul class="row content accordion-wrap">
+    
+            <li class="col-xs-12 col-md-6 lazy-bkpt-item src-loaded accordion-item" data-lazyload-xs="//d1k2b30k3u7bnq.cloudfront.net/resize/tridion/768x432/ruru/corolla_winter_tcm-3020-1825606.jpg" data-lazyload-sm="//d1k2b30k3u7bnq.cloudfront.net/resize/tridion/992x558/ruru/corolla_winter_tcm-3020-1825606.jpg" data-lazyload-md="//d1k2b30k3u7bnq.cloudfront.net/resize/tridion/960x540/ruru/corolla_winter_tcm-3020-1825606.jpg" data-lazyload-lg="//s3-eu-west-1.amazonaws.com/tme-toyotaone-prev/toyotaone/ruru/corolla_winter_tcm-3020-1825606.jpg" style="background-image: url(&quot;//s3-eu-west-1.amazonaws.com/tme-toyotaone-prev/toyotaone/ruru/corolla_winter_tcm-3020-1825606.jpg&quot;);" data-bt-value="Зимний пакет">
+                
+                <span class="icon icon-remove hidden-md hidden-lg"></span>
+                <div class="frame">
+                    <span class="hidden-xs position">
+                        
+                        
+                            <span class="icon icon-snowflake"></span>
+                        
+                    </span>
+                    <div class="description">
+                        <h2>Зимний пакет</h2>
+                        <p>Россия славится суровыми зимами. Поэтому мы предусмотрели всё, чтобы комфорт окружал вас, пока за окном бушует снежная буря. Зимний пакет* не позволит морозам вносить правки в ваши планы на день.</p>
+                    </div>
+                </div>
+            </li>
+        
+            <li class="col-xs-12 col-md-6 lazy-bkpt-item src-loaded accordion-item" data-lazyload-xs="//d1k2b30k3u7bnq.cloudfront.net/resize/tridion/768x432/ruru/corolla_tss_tcm-3020-1825607.jpg" data-lazyload-sm="//d1k2b30k3u7bnq.cloudfront.net/resize/tridion/992x558/ruru/corolla_tss_tcm-3020-1825607.jpg" data-lazyload-md="//d1k2b30k3u7bnq.cloudfront.net/resize/tridion/960x540/ruru/corolla_tss_tcm-3020-1825607.jpg" data-lazyload-lg="//s3-eu-west-1.amazonaws.com/tme-toyotaone-prev/toyotaone/ruru/corolla_tss_tcm-3020-1825607.jpg" style="background-image: url(&quot;//s3-eu-west-1.amazonaws.com/tme-toyotaone-prev/toyotaone/ruru/corolla_tss_tcm-3020-1825607.jpg&quot;);" data-bt-value="Toyota Safety Sense">
+                
+                <span class="icon icon-remove hidden-md hidden-lg"></span>
+                <div class="frame">
+                    <span class="hidden-xs position">
+                        
+                        
+                            <span class="icon icon-car"></span>
+                        
+                    </span>
+                    <div class="description">
+                        <h2>Toyota Safety Sense</h2>
+                        <p>Инновационные технологии Toyota Safety Sense 2.0 обеспечивают высочайший уровень безопасности вашего движения. Интеллектуальные системы активной и пассивной безопасности* предупредят вас, если ситуация будет выходить из-под вашего контроля.</p>
+                    </div>
+                </div>
+            </li>
+        
+</ul>
+<!-- car-explore/visual-content-items.nj : end -->
+            </div>
+        
+    </section>
+
+
+
+
+<script>
+    const accordionKD = () => {
+
+        const accordionWrap = document.querySelectorAll('.accordion-wrap'),
+            accordionItem = document.querySelectorAll('.accordion-item');
+
+            accordionWrap.forEach((currentAccordion) => {
+                currentAccordion.addEventListener('click', (event) => {
+                    let target = event.target; 
+                    target = target.closest('.accordion-item');
+
+                    
+                    if(target) {                      
+
+                      if (currentAccordion.classList.contains('active') && target.classList.contains('active')) {
+                        currentAccordion.classList.remove('active');
+
+                        accordionItem.forEach((item,i) => {
+                            item.classList.remove('active');                            
+                        });
+                        
+                        return;
+                      }
+
+                      if (currentAccordion.classList.contains('active') && !target.classList.contains('active')) {
+                        accordionItem.forEach((item,i) => {
+                            item.classList.remove('active');                            
+                        });
+                        target.classList.add('active');                        
+                        return;
+                      }
+
+                      if (!currentAccordion.classList.contains('active') && !target.classList.contains('active')) {
+                        currentAccordion.classList.add('active');
+                        target.classList.add('active');                        
+                        return;
+                      }
+                    }
+                    
+                });
+            });
+
+        
+
+    };
+
+    accordionKD();
+
+</script>
