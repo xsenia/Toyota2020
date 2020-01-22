@@ -1,0 +1,1191 @@
+﻿cd projects/tr5/
+cd projects/tr5/vendor/tradeins/corp-bundle/Tradeins/CorpBundle/
+cd projects/tr5/vendor/tradeins/corp-theme/Tradeins/Theme/
+
+cd projects/tr5/vendor/tradedealer/owners-bundle/Tradedealer/OwnersBundle/
+
+cd projects/tr5/vendor/tradedealer/image-bundle/Tradedealer/ImageBundle/
+
+
+****
+
+Login Information (for Windows Vista, 7, 8, 10 VMs): IEUser, Passw0rd!
+
+****
+
+"BACKEND_URL": "http://payment-backend.dborodin.trade",
+
+
+cd projects/tr5/vendor/tradeins/config-bundle/Tradeins/ConfigBundle 
+
+cd projects/tr5/vendor/tradeins/corp-bundle/Tradeins/CorpBundle/Resources/public/vendor/slick-carousel/slick
+
+
+
+cd projects/tr5/vendor/tradeins/corp-bundle/Tradeins/CorpBundle/Resources/public/admin/js/ckeditor_templates/custom_templates.js
+
+
+****************
+
+онлайн-оплаты
+
+база: tr5_toyota_velikan_izmailovo_lb_new_prod_kamalov
+проект 794
+
+ветка payment
+http://tr5.kdemeneva.trade/app_dev.php/payment-supra/n1055423
+
+tradedealer.payment.url: 'http://payment.ikamalov.trade/app_dev.php/'
+
+
+***********************************
+
+admin@tradedealer.ru | tradecoder
+
+***********************************
+
+project copy-uploads ID проекта
+из папки web
+
+cd projects/tr5/web/
+
+************************************
+
+Владельцам
+
+чтобы зайти - надо создать пункт меню, выбрать модуль "Услуги" (как то так называетс)
+данные через апи подтягиваются, называется Service и ServiceCategory
+
+
+у 302 проекта вроде что-то заведено
+https://cms.tradedealer.ru/dashboard
+раздел "Сервис", там заводится
+
+database_name: test_stand_37
+tradeins_corp.api.auth.user: toyota_velikan_izmailovo_lb_new
+tradeins_corp.api.auth.password: 2ba387485ce9225950878f85915c70a7
+tradeins_corp.api.unique_id: Dg0Qb0vuUT7EzflX
+owners.api.url: 'http://owners-api.asenchev.trade/'
+
+
+***********************
+
+toyota.tradedealer.net
+
+admin@tradedealer.ru
+
+tradecoder
+
+***********************
+
+
+Тактика - http://toyota-base.tradedealer.net/
+Картинки - http://toyota.tradedealer.net/
+
+
+HTTPS
+
+https://toyota.space/uploads/projects/toyota_tradedealer/ 
+
+*** вместо *** 
+
+http://toyota.tradedealer.net/
+
+пишем
+
+https://toyota.space/uploads/projects/toyota_tradedealer/uploads/images/Ñ‚ÑƒÑ‚-Ð½Ð°Ð·Ð²Ð°Ð½Ð¸Ðµ-ÐºÐ°Ñ€Ñ‚Ð¸Ð½ÐºÐ¸.jpg/png
+
+https://toyota.space/uploads/projects/toyota_tradedealer/uploads/images/icon--6-2_tcm-3020-1636712.png
+
+
+***********************
+
+â‚½ = <span class="rub">a</span>
+
+************************
+
+ne mogu zaiti v adminky
+https://tradeins.ru/cms - tut
+https://confluence.tradedealer.ru/pages/viewpage.action?pageId=33917922
+admin@tradedealer.ru
+tradecoder
+
+
+************************
+
+D:\home\kdemeneva\projects\tr5\vendor\tradedealer\image-bundle\Tradedealer\ImageBundle\Resources\config\imagine.yml
+
+************************
+
+D:\home\kdemeneva\projects\tr5\vendor\tradeins\corp-bundle\Tradeins\CorpBundle\Resources\public\js\core\directives\header-more.js
+
+***********************
+
+D:\home\kdemeneva\projects\tr5\vendor\tradeins\corp-theme\Tradeins\Theme\SovcomBank\Resources\public\images
+
+D:\home\kdemeneva\projects\tr5\vendor\tradeins\corp-bundle\Tradeins\CorpBundle\Resources\public\admin\js\ckeditor_templates\images
+
+
+*********MSP************
+
+cd projects/msp/
+
+http://msp.kdemeneva.trade/
+
+HOST=msp.kdemeneva.trade PORT=3010 npm start
+
+
+
+~/projects/msp/vendor/tradedealer/entity-bundle/Tradedealer/EntityBundle$ - pull too
+
+in projects/msp:
+rm -rf var/cache/*
+php bin/console d:m:m
+
+
+
+https://specials.tradedealer.ru/ - SP
+
+
+**************************
+
+
+D:\home\kdemeneva\projects\tr5\vendor\tradeins\corp-bundle\Tradeins\CorpBundle\Resources\public\admin\js\ckeditor_templates\custom_templates.js
+
+
+***********************************
+
+
+(/bundles/tradeinscorp/images/brands/dongfeng_mini.png)
+D:\home\kdemeneva\projects\tr5\vendor\tradeins\corp-bundle\Tradeins\CorpBundle\Resources\public\images\brands
+
+width  27 - genesis_micro.png
+width  54 - genesis_micro@2x.png
+width  56 - genesis_mini.png
+width 112 - genesis_mini@2x.png
+width 115 - genesis_big.png
+width 240 - genesis.png
+
+
+************************************
+
+
+AB test
+
+D:\home\kdemeneva\projects\tr5\vendor\tradeins\corp-bundle\Tradeins\CorpBundle\Service\ABTestService.php
+
+new \Twig_SimpleFunction('isMainABTest', [$this, 'isMainABTest']),
+new \Twig_SimpleFunction('isHypothesisABTest', [$this, 'isHypothesisABTest']),
+
+
+{% if isMainABTest(123) %}
+    {{ 'car_request_aside.title' | trans([], 'trforms') }}
+{% endif %}
+{% if isHypothesisABTest(123) %}
+    Ð£Ð·Ð½Ð°Ñ‚ÑŒ Ð¿Ð¾Ð´Ñ€Ð¾Ð±Ð½ÐµÐµ
+{% endif %}
+
+?ab_group=1
+?ab_group=2
+http://tr5.kdemeneva.trade/app_dev.php/buy-car/new-cars/skoda/octavia2017/n708317?ab_group=1 
+
+
+*************************************
+
+
+button text
+D:\home\kdemeneva\projects\tr5\vendor\tradeins\corp-bundle\Tradeins\CorpBundle\Translation\PresetDefaultTextProvider.php
+
+
+************************************
+
+FOTO TOYOTA
+http://prev.images.toyota-europe.com/ сервер с которого берем фотоконтент
+https://confluence.tradedealer.ru/pages/viewpage.action?pageId=32506617
+
+
+***********************************
+
+
+'bundles/tradeinscorp/js/core/directives/header-more.js'
+
+D:\home\kdemeneva\projects\tr5\vendor\tradeins\corp-bundle\Tradeins\CorpBundle\Resources\public\js\core\directives\header-more.js
+
+
+
+
+
+***********************************
+
+IOS баг с кареткой
+
+https://jira.tradedealer.ru/browse/TMR-1891
+https://git.artsofte.ru/tradeins/corp-bundle/merge_requests/1619/diffs
+
+
+***********************************
+
+
+https://jira.tradedealer.ru/browse/TD-12891
+https://git.artsofte.ru/tradeins/corp-theme/merge_requests/1654/diffs
+
+
+***********************************
+
+[[offers.tradein.offer.FinishTime | date ]]
+
+***********************************
+
+Theme\BrandKia\Resources\public\js\brandkia.config.js
+Ñ‚ÐµÐ±Ðµ Ð½Ð°Ð´Ð¾
+SlickConfigProvider.setOption('galleryArrow', 'caret');
+caret - 
+
+
+как на киа можешь глянуть
+там в base.html.twig добавляешь
+{% block customJavascripts %}
+   {% javascripts package="js"
+   'bundles/brandcitroen/js/*.js' %}
+   <script type="text/javascript" {% if app.environment == 'prod'%}defer{% endif %} src="{{ asset_url }}"></script>
+   {% endjavascripts %}
+{% endblock %}
+
+
+и создаешь папку js, в ней файл brandcitroen.config.js
+и туда как на киа копируешь
+
+************************************
+
+
+а напомни зачем default - $font-size-sm: .777777778em !default;
+чтобы перебить можно было
+если его не указать, то ты не переопределишь в теме переменную
+
+
+************************************
+
+
+создаем виджет
+
+1) D:\home\kdemeneva\projects\tr5\vendor\tradeins\corp-bundle\Tradeins\CorpBundle\Entity\Widget\Widget.php
+
+'additional_link'                            => 'Владельцы. Дополнительные ссылки',
+
+2) D:\home\kdemeneva\projects\tr5\vendor\tradeins\corp-bundle\Tradeins\CorpBundle\Controller\WidgetController.php
+
+public function additionalLinkAction(Widget $widget) {
+    return $this->render('@TradeinsCorp/Widget/additional_link.html.twig');
+}
+
+3) D:\home\kdemeneva\projects\tr5\vendor\tradeins\corp-bundle\Tradeins\CorpBundle\Admin\WidgetAdmin.php
+
+private function getWidgetsNoParamaters()
+    {
+        return [
+            //'all_inclusive',
+            'form_credit',
+            'form_insurance',
+            'form_sell_car',
+            'brand_slider',
+            'menu',
+            'special_offers_cars',
+            'additional_service',
+            'test_drive',
+            'test_drive_by_complectation',
+            'sell_car',
+            'additional_link',
+        ];
+    }
+
+
+******************
+
+Изображения
+
+D:\home\kdemeneva\projects\tr5\vendor\tradeins\corp-theme\Tradeins\Theme\BrandToyota2018\Resources\public\images
+
+<img class="additional-link-mobile__img" src="{{ asset('bundles/brandtoyota2018/images/ico-add-link-04.png') }}" border="0" title="Toyota" alt="Toyota">
+
+
+******************
+
+project self-update
+
+--latestVersion или --fromProd2
+
+
+******************
+
+
+Список услуг - https://jira.tradedealer.ru/browse/TMR-2307
+
+Карточки - https://jira.tradedealer.ru/browse/TMR-2309 - не смержена
+
+
+
+******************
+
+t:d:r --refresh_photos
+подскажите как перекропать/перескачать каталожные фотографии на копии?
+
+
+******************
+/projects/tr5/vendor/tradedealer/owners-bundle/Tradedealer/OwnersBundle
+git pull - владельцы
+
+в корне делаю в ветке owners
+
+
+******************
+
+
+project list | grep skoda
+
+
+******************
+
+
+ng-class="::{'ui-select__item-text_with-logo': company.Brands[0].getLogo('micro') || ((company.Brands.length === 1 && company.Brands[0].Logo) || company.Logo)}" про��то ра����кажи что это значит
+
+
+ранее было:
+кла���� ui-select__item-text_with-logo вешать е��ли е��ть лого бренда
+��ча�� е��ли е��ть лого дилреа тоже вешаем кла���� ui-select__item-text_with-logo
+у ui-select__item-text_with-logo от��туп е��ть ��права. типа резерв под логотип
+у��ловие про лого дилера �� внизу по коду где то под��мотрела
+
+Деменева К��ени�� [10:38 AM]
+так, company.Brands[0].getLogo('micro') - ��то у��ловие про лого дилера?
+
+Евгени�� Гордеева [10:38 AM]
+��то лого бренда
+company.Brands.length === 1 && company.Brands[0].Logo вот лого дилера
+
+
+*****************
+
+
+https://jira.tradedealer.ru/browse/TD-13212
+
+PHP. GM. У по��ледней модели не работает кнопка "Выбрать ��ту комплектацию"
+
+
+*****************
+
+skeleton
+https://git.artsofte.ru/tradeins/corp-bundle/merge_requests/2286/diffs
+https://git.artsofte.ru/tradeins/corp-bundle/merge_requests/2336/diffs
+
+{% for i in 0..4 %}
+    <div class="col-md-2" style="margin-bottom: 10px;">
+                <span>
+                    <span class="pseudo-text" style="width:100%;margin-bottom: 10px;"></span>
+                    <span class="pseudo-text" style="width:100%"></span>
+                </span>
+    </div>
+{% endfor %}
+
+
+*****************
+
+
+owners.api.url: 'http://owners-api.asenchev.trade/'
+
+database_name: test_stand_23_owners
+
+
+*****************
+
+кроп
+
+[img:{{ tradeins_image_filter(card.icon.path, 'owners_quick_link_mobile') }}]
+
+owners_quick_link_mobile - кроп
+
+D:\home\kdemeneva\projects\tr5\vendor\tradedealer\image-bundle\Tradedealer\ImageBundle\Resources\config\imagine.yml
+
+cd projects/tr5/web/media
+
+sudo rm -rf cache/*
+
+задача - https://jira.tradedealer.ru/browse/TD-11783
+Создать кропы во всех соотношениях сторон для 4k изображений (3 к 1, 7 к 2 и т.д.)
+{% if banner.imageHd %}
+    <source data-srcset="{{ tradeins_image_filter(banner.imageHd, banner_filter~ '_4k') }}"
+        media="(min-width: 1921px)">
+{% endif %}
+
+
+banner_filter~ '_4k' - название кропа
+
+projects\tr5\vendor\tradedealer\image-bundle\Tradedealer\ImageBundle\Resources\config\imagine.yml
+
+
+widget_banner_4k: &widget_banner_4k
+<<: *widget_banner
+filters:
+upscale: { min: [4096, 1970] }
+thumbnail: { size: [4096, 1970], mode: outbound }
+
+
+<<: *widget_banner - кроп наследуетя от widget_banner
+
+далее добавляем все пропорции, нр,
+
+widget_banner_type_16-to-9_4k: &widget_banner_type_16-to-9_4k
+<<: *widget_banner_type_16-to-9
+filters:
+upscale: { min: [4096, 768] }
+thumbnail: { size: [4096, 768], mode: outbound }
+post_processors:
+jpegoptim: { strip_all: true, max: 90, progressive: true }
+
+
+проверяем все загружая баннер и меню в настройках сайта настройку - main_banner_ratio
+
+почему при ширине больше 4096 картинка по высоте была больше чем надо -
+
+сама картинка 1345. мне кажетя он просто посчитать не может и растянуть картинку до 5555
+картинка абсолютом стоит и высота 100%
+у родителя есть псевдэлемент after c padding-bottom соответствеещим пропорции 3-к-1
+.banner_lazy-load_anticipated.banner_size_3-to-1::after
+
+
+
+
+
+*****************
+
+
+
+
+в��е js, css, картинки и прочее нужно подключать через asset() вот так:
+{{ asset('brandtoyota2018/images/svg/static/used_card.svg', 'bundlePackage') }}
+1) Подключать только через asset, никаких пр��мых ����ылок
+2) С��ылки должны быть отно��ительными(не начинать���� �� /)
+3) Должен быть указан второй аргумент(package), который добавит либо assets, либо bundles в начало ����ылки. По��тому "bundles" в ����ылке указывать не нужно
+
+Спи��ок возможных вариантов package можно по��мотреть вот тут:
+vendor/tradeins/corp-bundle/Tradeins/CorpBundle/DependencyInjection/TradeinsCorpExtension.php
+
+
+*****************
+
+
+form-control ui-select-search ng-pristine ng-valid ng-empty ng-touched
+btn btn-default form-control ui-select-toggle
+form-control ui-select-search ng-valid ng-touched ng-dirty ng-valid-parse ng-empty
+
+
+*****************
+
+baron-scrollbar Ð½Ðµ Ñ€Ð°Ð±Ð¾Ñ‚Ð°ÐµÑ‚ Ñ Ð¼Ð°ÐºÑÐ¸Ð¼Ð°Ð»ÑŒÐ½Ð¾Ð¹ Ð²Ñ‹ÑÐ¾Ñ‚Ð¾Ð¹
+
+
+*****************
+
+
+��валка в названи��х кла����ов тут не нравит���� https://git.artsofte.ru/tradedealer/owners-bundle/merge_requests/6/diffs
+
+car-card__img е��ть, а car-card нет, внутри service-grid почему то service-descr__category, ну т.е. ��лементы как будто не �� блоками а отдельной жизнью живут
+
+
+
+
+****************
+
+
+ng-class="{'active': activeCondition == true}" ng-click="activeCondition = activeCondition == true ? false : true"
+
+
+*******************
+
+https://git.artsofte.ru/tradeins/corp-bundle/merge_requests/2396
+Е��ли нужно ��формировать ����ылку на какой-то файл, который загружает���� через админку ��амого ��айта(например баннер), то в asset надо передавать package "uploads" - тогда cdn под��тавл��ть���� не будет
+
+
+********************
+
+
+http://tr5.kdemeneva.trade/app_dev.php/test/form
+
+
+********************
+
+
+��келет
+
+иконки показывать ��келетом, пока не загрузил���� svg-��прайт
+.svg-sprite-loading {
+    .pseudo-icon {
+        display: inline-block;
+        background: $pseudo-bg-color;
+        border-radius: $pseudo-border-radius;
+    }
+
+    .pseudo-icon_round {
+        border-radius: 50%;
+    }
+}
+
+
+<span class="like-button__icon pseudo-icon"></span>
+
+<media class="stat-teaser__media">
+    {{ icon.icon_default('location-icon', 'stat-teaser__icon stat-teaser__icon_location pseudo-icon') }}
+</media>
+
+
+
+******************
+
+опции project
+
+project -h
+
+
+*****************
+
+микроразметка
+
+на ��ндек��е был ин��трумент как проверить на правильно��ть разметки. надо пои��кать может.
+там бывают про��то ошибки на предмет какие то пол�� об��зательные, какие то нет. об��зательное д.б. заполнено и в��е такое
+
+*****************
+
+нова�� тема
+
+Евгени�� Гордеева [12:30 PM]
+1) в темах ��оздаешь новую ветку (Ветка задачи)
+2) в корне генеришь тему вот ��той командой php app/console trcorp:theme:generate BrandTest (вме��то BrandTest название темы). �� обычно тут делаю промежуточный коммит.
+3) в CI добавл��ешь название темы, она по��вит���� в ��пи��ке тем
+4) переключаешь���� на тему
+5) ну у теб�� тут копирование темы по ��ути. по��тому config, public и views можно про��то ��копировать (промежуточный коммит) (открываешь папку �� проектом DealershipKeyauto, ней Resources, в ней 3 папки config, public и views. выдел��ешь - копируешь, и в��тавл��ешь в папку Resources c новой темой.)
+6) grunt loader запу��тить, чтобы он лаодер ��оздал (запу��каешь про��то в корне - она лоадер ��озда��т нужного цвета. цвет возьмет из Resources\config\theme_config.yml (primary_color) )
+
+открой public\scss\theme\_variables-theme.scss
+помен��й там $theme
+��ча�� там DealershipKeyauto, а ты напиши HoldingKeyautoUrfo
+
+
+7) а дальше вно��ить правки как там в задаче опи��ано..
+
+е��ли вообще нова�� тема то начина�� �� п.5 вер��таешь. там обычно какие нить брендбуки е��ть, ты их них в переменные цвета зано��ишь. шрифты и пр.
+
+
+
+HoldingKeyautoUrfo
+
+******************
+
+
+
+https://jira.tradedealer.ru/browse/TD-13348
+@a.ivanov @e.gordeeva может Женины изменени�� ��мерджим в devel? Чтобы не плодить конфликты. Изменени�� ведь ��овме��тимы и �� текущей, и �� новой вер��ией путей
+
+
+Евгени�� Гордеева [5:26 PM]
+�� только вот ее на ревью отправила. конфликтов вроде не пишет
+
+��лек��ей Иванов [5:28 PM]
+вр��д ли в ��тих ме��тах по��в��т���� конфликты, в ма��тере их трогать не будут
+https://jira.tradedealer.ru/browse/TD-13348
+По вер��тке нет замечаний. Отправл��ю на ревью тебе @n.kondrashin, чтобы ��мерджить когда будет готово к выгрузке
+
+��икита Кондрашин [5:34 PM]
+��о тут важно помнить, что в по��ледующем в��е новые пути должны быть такими
+@a.ivanov @k.demeneva
+
+��лек��ей Иванов [5:43 PM]
+��б��олютные пути до картинок теперь нельз�� и��пользовать в ��тил��х. ��а проде они будут отдавать 404. Это прои��ходит потому что в начале пути до CDN теперь указывает���� дата обновлени��. Она будет по��то��нно мен��ть����.
+
+Чтобы избежать ошибок, до��таточно ��облюдать правила:
+1. Е��ли нужно в ��тил��х указать путь до картинки - делайте ��то через переменные $image-path и другие подобные
+2. Е��ли картинка в ��тил��х из crucial.scss - перене��ите ее в theme.scss. ��апример, можно перене��ти в файлик _header-main_images.scss или новый компонент.
+@k.demeneva
+
+
+
+**************
+
+
+ng-switch on="state.mode==='skeleton'"
+��то мы как бы у��тановки делаем начальные
+
+далее
+ng-switch-when="true" - ��то у ��келета
+
+ng-switch-when="false" ng-cloak - ��то у реального контента
+
+
+
+***************
+
+
+Деменева К��ени�� [3:47 PM]
+а как чекбок�� перекра��ить - ��аму ��вгшку?
+
+Евгени�� Гордеева [3:48 PM]
+вз��ть из бандла, положить ��вг в папку images/svg/static, открыть ��вг в редакторе, найти в коде fill и указать какой надо
+те что как фон они из images/svg/static т��нут����
+
+дл�� ��пайта кладу в sourse, попадает в intrmediate-svg
+
+
+
+е��ли положить ��юда
+D:\home\kdemeneva\projects\tr5\vendor\tradeins\corp-theme\Tradeins\Theme\BrandToyota2018\Resources\views\Icons
+то должен быть подключен {% import '@TradeinsCorp/Layout/icon.html.twig' as icon %}
+вывод {{ icon.icon_include('tools2', 'svg-icon icon-tools') }}
+кла����ы ��охран��ют����, при наведении можно кра��ить по-разному
+
+
+****************
+
+Баннер (��трелки заменить, пагинацию)
+https://jira.tradedealer.ru/browse/TD-14191
+
+****************
+
+
+TMR-2576
+Свг не видно
+xlink:href="#plus" заменить на
+xlink:href="{{ asset('bundles/'~(theme ? theme|lower : 'tradeinscorp')~'/images/svg/symbol/svg/sprite.optimized.symbol.svg', 'svg') }}#plus"
+
+****************
+
+
+https://jira.tradedealer.ru/browse/TMR-2567
+убираю ��мену картинок по навдению
+{% block changeView %}
+{% if not isMobile() %}
+ng-mouseenter="changeViewTwig()"
+ng-mouseleave="resetView()"
+{% endif %}
+{% endblock %}
+
+{% block changeView %}
+ng-controller="CarsInStockChangeViewCtrl"
+ng-mouseenter="changeView()"
+ng-mouseleave="resetView()"
+{% endblock %}
+
+
+****************
+
+фильтр ��ортировки
+
+автоплю�� - е��ть треть�� вер��и��, �� переключателем вида карточек
+.sorting_v3 .sorting__wrap
+
+https://jira.tradedealer.ru/browse/TD-14262 - задача - ��делать в одну ��троку
+
+
+
+*****************
+
+https://jira.tradedealer.ru/browse/TD-14373
+https://git.artsofte.ru/tradeins/corp-bundle/blob/master/Resources/views/Print/print-info.html.twig
+
+*****************
+
+Делаем баннеры �� помощью тега и data-srcset
+https://jira.tradedealer.ru/browse/TMR-2568
+
+
+*****************
+
+
+https://git.artsofte.ru/tradeins/corp-theme/merge_requests/2062/diffs
+&__title-suffix {
+&:empty {
+display: none;
+}
+}
+
+
+
+************
+
+--- Фильтр ---
+
+https://jira.tradedealer.ru/browse/TD-14683
+
+1. Купить авто. ��овые авто v3 - ��втоплю��
+
+D:\home\kdemeneva\projects\tr5\vendor\tradeins\corp-bundle\Tradeins\CorpBundle\Resources\views\BuyCarV3\index_content.html.twig
+
+2.
+
+*************
+
+Лого дилера
+
+1) заверстан - это только для холдингов актуально, мы часто про лого ДЦ говорим. на брендовых темах не может быть заверстан лого какого то одного ДЦ.
+2) да, в настройках можно указать путь до логотипа
+3) да. этот по умолчанию он выводит����
+
+там проверка ��тоит - е��ли в на��тройках указан путь, то из на��троек берет����, е��ли не указан (на��тройка пу��та��) то из cms. ну ��то было так, на��колько �� помню.
+
+
+*************
+
+е��ли поколений ≥ 3, то лучше и��пользовать 3 колонки
+https://jira.tradedealer.ru/browse/TMR-2655
+ng-class="{'tabs-tiles_w50' : state.companies.length < 3}}"
+
+*************
+
+<aside class="service-form__aside" ng-class="{'service-form__aside_alone': !userData.car.Brand}">
+                    {% include "@TradeinsCorp/SellCar/FormBlock/aside.html.twig" %}
+                </aside>
+
+&__main_alone {
+            left: 100% / 12 * 2;
+        }
+
+        &__aside_alone {
+            width: 0;
+            padding: 0;
+        }
+
+corp-bundle\Tradeins\CorpBundle\Resources\views\BuyCar\CommonBlock\sell_car_layer.html.twig - http://tr5.kdemeneva.trade/app_dev.php/toyota/new_rav4/n866690#SellCarRequestForm ÑÑ‚Ð°Ñ€Ð°Ñ Ñ‚Ð¾Ð¹Ð¾Ñ‚Ð°
+
+corp-bundle\Tradeins\CorpBundle\Resources\views\ServiceV2\index_content.html.twig
+
+corp-bundle\Tradeins\CorpBundle\Resources\views\SellCar\index_content.html.twig - http://tr5.kdemeneva.trade/app_dev.php/sell-car#SellCarFormBlock Ð°Ð²Ñ‚Ð¾Ð¿Ð»ÑŽÑ
+
+corp-bundle\Tradeins\CorpBundle\Resources\views\Service\index_content.html.twig - http://tr5.kdemeneva.trade/app_dev.php/service#ServiceFormStep1 Ð°Ð²Ñ‚Ð¾Ð¿Ð»ÑŽÑ
+
+corp-bundle\Tradeins\CorpBundle\Resources\views\ServiceNiva\index_content.html.twig - Ð½Ð¸Ð²Ð° http://tr5.kdemeneva.trade/app_dev.php/for-owners/service/to#ServiceFormStep2 Ð±Ð°Ð·Ð° 641
+
+
+
+*****************
+
+
+https://jira.tradedealer.ru/browse/TD-14694
+добавить разр��дно��ть
+
+разр��дно��ть была, проблема в шрифте
+
+"C:\Program Files (x86)\FontForgeBuilds\run_fontforge.exe"
+шрифт редактируем и загружаем новый
+
+https://ru.stackoverflow.com/questions/790358/%D0%92-%D0%BF%D0%BE%D0%B4%D0%BA%D0%BB%D1%8E%D1%87%D0%B5%D0%BD%D0%BD%D0%BE%D0%BC-%D1%88%D1%80%D0%B8%D1%84%D1%82%D0%B5-%D0%BD%D0%B5-%D0%BF%D0%BE%D0%BA%D0%B0%D0%B7%D1%8B%D0%B2%D0%B0%D0%B5%D1%82%D1%81%D1%8F-%D0%BA%D0%BE%D0%BD%D0%BA%D1%80%D0%B5%D1%82%D0%BD%D1%8B%D0%B9-%D1%81%D0%B8%D0%BC%D0%B2%D0%BE%D0%BB
+
+��охран��ем шрифт, конвертируем в Woff и woff2
+
+https://convertio.co/ru/sfd-woff/
+https://www.font-converter.net/en/download/72a6746c56ae6d66ec5f39e18f28a6b8
+
+
+
+*****************
+
+HTML. Добавить неразрывный пробел в под��казку о кредите в карточке авто
+https://git.artsofte.ru/tradeins/corp-bundle/merge_requests/2776/diffs
+
+uib-popover="{{ creditPrompt() | raw }}"
+
+
+*****************
+
+
+добваление на��троек
+
+https://jira.tradedealer.ru/browse/TMR-2683
+
+Resources/config/project/settings.yml ��юда добавл��ют на��тройки
+
+вывод:
+{% if config('footer_contacts_pretext') %}
+
+
+{{ config('footer_contacts_pretext') }}
+
+
+{% endif %}
+
+
+****************
+
+
+ng-repeat="model in models |  limitTo:7" ? (edited) 
+
+ng-repeat="model in models" ng-if="$index < 7"
+
+
+****************
+
+
+владельцы. кнопка "добавить еще"
+
+https://jira.tradedealer.ru/browse/TMR-2719
+
+
+****************
+
+<div ng-class="{'active': toggleOpen}">
+    
+    <button type="button" ng-click="toggleOpen = !toggleOpen"
+       ng-class="{'active': toggleOpen}"
+       ng-show="!toggleOpen"
+       class="btn btn-default"
+    >
+        <span>Развернуть</span>
+    </button>
+    <button type="button" 
+      ng-click="toggleOpen = !toggleOpen"
+      ng-show="toggleOpen"
+      class="btn btn-default"
+    >
+        <span>Свернуть</span>
+    </button>
+</div>
+
+
+***************
+
+
+https://jira.tradedealer.ru/browse/TD-14802 - Убрала у� �лайдера в КК шкалу
+�
+�рок кредита уходит в правую колонку,� �елект не нужен
+
+<div class="range-slider">
+    <div class="range-slider__caption">
+        <div class="range-slider__title">
+            Ð¡Ñ€Ð¾Ðº ÐºÑ€ÐµÐ´Ð¸Ñ‚Ð°
+            <span ng-if="program.type == 'rv'" class="prompt">
+            <span class="prompt__item"
+                  uib-popover=" Ð¡Ñ€Ð¾Ðº ÐºÑ€ÐµÐ´Ð¸Ñ‚Ð° Ñ„Ð¸ÐºÑÐ¸Ñ€Ð¾Ð²Ð°Ð½ Ð¸ ÑÐ¾ÑÑ‚Ð°Ð²Ð»ÑÐµÑ‚ 24 Ð¸Ð»Ð¸ 36 Ð¼ÐµÑ. (Ð¼Ð¾Ð¶Ð½Ð¾ Ð¿Ð¾Ð³Ð°ÑÐ¸Ñ‚ÑŒ ÐºÑ€ÐµÐ´Ð¸Ñ‚ Ð´Ð¾ÑÑ€Ð¾Ñ‡Ð½Ð¾ Ð² Ð»ÑŽÐ±Ð¾Ðµ Ð²Ñ€ÐµÐ¼Ñ Ð±ÐµÐ· ÐºÐ¾Ð¼Ð¸ÑÑÐ¸Ð¸)"
+                  popover-trigger="mouseenter"
+                  popover-placement="auto top"
+                  popover-append-to-body="true"
+            >i</span>
+        </span>
+        </div>
+        <div class="range-slider__value">
+            <div class="range-slider__num">
+                {{ block('inputPeriod') }}
+            </div>
+        </div>
+    </div>
+
+    <div ui-slider-orig
+         lower-bound="[[ creditParams.period_min ]]"
+         upper-bound="[[ creditParams.period_max ]]"
+         min="[[ creditParams.period_total_min ]]"
+         max="[[ creditParams.period_total_max ]]"
+         step="[[ periodStep ]]"
+         ng-model="creditParams.period"
+         ng-change="touchCredit()"
+         class="ui-slider ui-slider_complex">
+
+        <div class="ui-slider-out-of-bounds ui-slider-out-of-bounds_start"
+             ng-style="{width: getPeriodBoundMin(program) +'%'}">
+            <div class="ui-slider__bound ui-slider__bound_start">
+            </div>
+        </div>
+
+        <div class="ui-slider-out-of-bounds ui-slider-out-of-bounds_end"
+             ng-style="{width: getPeriodBoundMax(program) +'%'}">
+            <div class="ui-slider__bound ui-slider__bound_end"></div>
+        </div>
+    </div>
+</div>
+
+***************
+
+
+
+https://git.artsofte.ru/tradeins/corp-theme/merge_requests/2217/diffs
+Ð·Ð°Ð¼ÐµÐ½Ð¸Ñ‚ÑŒ ÑˆÑ€Ð¸Ñ„Ñ‚Ñ‹, bmw
+
+***************
+
+�� дл�� процентов пишу так: percentage(1/3)
+
+
+***************
+
+grunt css --env=dev
+grunt watch --env=dev
+
+***************
+
+
+https://jira.tradedealer.ru/browse/TD-14695  img
+https://jira.tradedealer.ru/browse/TD-15060  menu dropdown
+
+
+***************
+
+Микроразметка
+https://jira.tradedealer.ru/browse/TD-15426
+
+теория
+https://yandex.ru/support/webmaster/schema-org/intro-schema-org.html
+
+проверка
+https://webmaster.yandex.ru/tools/microtest/
+
+
+
+***************
+
+попробовать на тактике 
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    $(document).ready(function() {
+        $('.car-part[data-popup]').on('click', function () {
+            console.log('popupTest');
+            $('.popup-' + $(this).attr('data-popup')).addClass('active');
+        });
+    });
+}, false);
+
+</script>
+
+
+*************
+
+
+про заголовки
+
+https://jira.tradedealer.ru/browse/TD-15404
+
+***********************************
+
+PAYMENT
+
+http://payment-frontend.kdemeneva.trade:3001/#/
+
+ng serve payment-frontend-desktop --host=payment-frontend.kdemeneva.trade --port=3001
+
+
+D:\home\kdemeneva\projects\payment-frontend\src\lib\styles\desktop\_grid.scss
+D:\home\kdemeneva\projects\payment-frontend\src\lib\styles\desktop\_variables.scss
+
+env PRODUCT_ID=13 npm run build-settings
+
+Тестовый стенд -  http://123.test-stand.tradedealer.net/toyota/supra?trade_source=root
+Доступ: toyota / toytoy1010
+Тестовые карты:
+- Срок действия и cvv любые.
+- номер 4000000000091001, (APPROVED, Успешный платеж)
+- номер 4000000000081051, (REJECTED, Срок карты истек)
+- номер 4000000000001810, (TIMEOUT, Тайм-аут)
+- номер  4000000000091076  (с 0-вым балансом)
+
+*************
+
+env PRODUCT_ID=13 npm run build-settings
+
+*************
+
+https://www.base64-image.de/
+
+*************
+
+
+<section>
+    <div >
+        <slick adaptive-height="true" class="slick-slider slider-nav" dots="true" id="slider-main" settings="slickConfig">
+        <div class="slick-slide">slide 1</div>
+        <div class="slick-slide">slide 2</div>
+
+    </slick></div>
+</section>
+
+
+*************
+
+```Solution 1: re-enable the adapter
+
+Open Control Panel > Network and Internet > Network and Sharing Center > Change adapter settings. 
+Check description of network adapters to find the Tap-Windows Adapter.  
+Right click on it > Disable. 
+Right click again > Enable.```  
+
+вот надо бы это проделать
+панель управления > сети > измен. парам. адаптера
+найти TAP-адаптер, сделать на нем выкл/вкл
+
+
+***************
+
+locator
+
+https://git.artsofte.ru/tradedealer/locator-builds-default/
+
+
+git clone
+git submodule init
+git submodule update
+PRODUCT_ID=2 npm run build-settings
+
+Запуск
+ng serve --host=host --port=port - по-умолчанию запускается мобильная версия
+ng serve --host=host --port=port locator-frontend-desktop - запуск десктопной версии
+
+!!! ЗАПУСК !!!
+ng serve locator-frontend-desktop
+
+
+Пуск > Выполнить > sysdm.cpl > Дополнительно > Переменные среды
+добавь переменную PRODUCT_ID
+CMS_URL=http://product-stage.tradedealer.ru PRODUCT_ID=1 node src/lib/config/loadSettings.js
+PRODUCT_ID - там 2 поставь наверное
+BRAND - kia например
+THEME - тоже можно kia
+
+BRAND, PRODUCT_ID, THEME, PUBLIC_PATH
+
+Алексей Иванов 1:27 PM
+у тебя может в винде задана глобальная переменная PRODUCT_ID
+Деменева Ксения:headphones: 1:27 PM
+да, я ее сама создала
+Алексей Иванов 1:27 PM
+удали
+у тебя из-за этого не собирается
+если запускать из git bash то переменные будут работать если их перед командой написать
+
+
+*** темы ***
+
+темы лежат вот тут locator-builds-default\src\lib\theme
+алгоритм создания темы:
+1) создаешь папку с названием темы
+2) копируешь туда файлы из какой нить брендовой темы
+3) меняешь картинки на те что в макете
+4) шрифты (в идеале должны совпадать с тр5, но как показывает практика - до идеала далеко, копируем шрифты с тр5)
+5) настраиваем переменные темы из макета (цвета, шрифты, стили для карточки авто.. )
+
+6) потом идем на тр5, создаем там страницу external-script и подключаем к ней модуль "внешний скрипт", после этого у нас ломается шапка и футер.
+Если не создается страница с модулем, то значит она уже есть
+
+Как тестировать новый локатор на своей копии тр5:
+1. ng build locator-frontend-desktop --prod
+2. Скопировать из dist/index.html строки и вставить в содержимое страницы /external-script
+<link rel="stylesheet" href="styles.5eff537390527a86d3a1.css">
+<link rel="stylesheet" href="styles.7315f101d739c4c9b163.css">
+<script src="polyfills.7315f101d739c4c9b163.js" defer></script>
+<script src="runtime.7315f101d739c4c9b163.js" defer></script>
+<script src="main.7315f101d739c4c9b163.js" defer></script>
+3. Добавить / в начало каждой ссылки
+<link rel="stylesheet" href="/styles.5eff537390527a86d3a1.css">
+<link rel="stylesheet" href="/styles.7315f101d739c4c9b163.css">
+<script src="/polyfills.7315f101d739c4c9b163.js" defer></script>
+<script src="/runtime.7315f101d739c4c9b163.js" defer></script>
+<script src="/main.7315f101d739c4c9b163.js" defer></script>
+4. Скопировать dist/**/* в tr-project/web/
+5. Почистить кеш
+6. Запускать БЕЗ app-dev.php (edited) 
+
+
+
+7) настраиваем файл external.scss, туда переносим стили для футера, беннера (если там кастом есть по стилям, возможно кнопки, аккордеон в футер.. в общем чтобы футер и шапка были как на странице тр5.
+8) возможно где то правим скрипты (выпадашки какие то в футере или шапке), если есть в футере/шапке кнопки, которые вызывают модальное окно, то меняем там ссылку (тут напишу пример)
+вроде все.
+дополнение к п.6
+
+
+
+
+
+
+это настройки
+PRODUCT_ID=130 npm run build-settings
+он конфиг формирует
+
+
+
+Евгения Гордеева 6:31 PM
+вообще там есть несколько сборок. есть дилерская сборка (locator-builds-dealer), есть сборка холдинга (locator-builds-default), и отдельно сборка сетелем (locator-builds-driveclick) и совком (locator-builds-sovcom)
+я когда брендовую создаю новую, то использую сборку locator-builds-dealer, но на момент создания темы продукты под нее еще не созданы, поэтому я верстаю например митсубиши, а витрины для нее нет. я загружаю проект шкода, у которой есть продукты, и в конфиге locator-builds-default\config\config.json  меню тему на митсубиши.для тематизации этого хватает.
+
+Евгения Гордеева 6:37 PM
+ну вообще темы - они в общих файлах. но сборки они могут отличаться друг от друга. тебе все равно надо будет в итоге все сборки у себя поднять. придет задача поправить чего нить на сетелеме - а он у тебя уже развернут
+вот мне Антон Смолин объяснял)
+src/lib - это общая директория для всех сборок
+если поменять в ней, изменится везде. Если нужен какой то кастом - делаем в директории src/app
+темы это как раз src/lib. во всех сборках есть
+
+дефолтная это сборка холдинга
+там тачки разных брендов могут быть
+
+
+добавить тему в cms (https://cms.tradedealer.ru/tradedealer/entity/productthemes/list)
+
+
+***
+
+скрипты external
+
+в corp-theme\Tradeins\Theme\HoldingAutoplus\Resources\views\ExternalScript\index.html.twig добавить:
+
+{% block javascripts %}
+    {{ parent() }}
+
+    {% javascripts package="js"
+        '@HoldingAutoplusBundle/Resources/public/javascript/external/external.js' %}
+        <script type="text/javascript" src="{{ asset_url }}"></script>
+    {% endjavascripts %}
+{% endblock %}
+
+создать corp-theme\Tradeins\Theme\HoldingAutoplus\Resources\public\javascript\external\external.js
+document.addEventListener("DOMContentLoaded", function() {
+    
+
+});
+
+sudo app/console assetic:dump --env=dev
+и sudo rm -rf app/cache/*
+
+
+***
+
+
+в исходном коде на витрине view-source:https://sales.mercedes-krasnodar.ru/external-script/new/
+находишь блок со скриптом и вставляешь себе в исходный код
+sales.mercedes-krasnodar.rusales.mercedes-krasnodar.ru
+Купить Mercedes-Benz  в г. Краснодар у официального дилера КЛЮЧАВТО
+Купить Mercedes-Benz в г. Краснодар, все комплектации и технические характеристики на сайте КЛЮЧАВТО
+3:56
+я ищу по tr-root
+итого, тебе надо просто вот этот кусочек
+
+<style type="text/css">tr-root {
+                                        font-family: sans-serif;min-height:75vh;display:block;position:relative
+                                    }
+                                    .tr-loader {
+                                        background: #fff; position: absolute; height: 100%; width: 100%;
+                                        display: flex; align-items: center; justify-content: center;
+                                    }
+</style>
+<tr-root id="root">
+<div class="tr-loader">
+<div class="tr-loader-text">Подождите, идет загрузка...</div>
+</div>
+</tr-root>
+<div><script src="https://script.tradedealer.ru/script/IO34RNbFvekfxIJh.js"></script></div>
+
+
+*********
+
+виджет новая корола
+http://tr5.kdemeneva.trade/app_dev.php/new-corolla
+база 1080
+
+
+******
+прод
+tradedealer.api.url: 'https://api.tradedealer.ru/'
+не прод
+tradedealer.api.url: 'http://payment.ikamalov.trade/app_dev.php'
+
+D:2, I:-2, S:2, C:-2
